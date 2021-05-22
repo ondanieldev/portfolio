@@ -1,6 +1,18 @@
 {
-  "name": "learn-starter",
-  "version": "0.1.0",
+  "name": "portfolio",
+  "version": "1.0.0",
+  "author": {
+    "email": "me@ondaniel.com.br",
+    "name": "Daniel Oliveira",
+    "url": "https://homepages.dcc.ufmg.br/~oliveiradaniel/"
+  },
+  "description": "My personal portfolio.",
+  "homepage": "https://homepages.dcc.ufmg.br/~oliveiradaniel/",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/stemDaniel/portfolio/",
+    "type": "git"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
