@@ -1,6 +1,18 @@
 {
-  "name": "learn-starter",
-  "version": "0.1.0",
+  "name": "portfolio",
+  "version": "1.0.0",
+  "author": {
+    "email": "me@ondaniel.com.br",
+    "name": "Daniel Oliveira",
+    "url": "https://homepages.dcc.ufmg.br/~oliveiradaniel/"
+  },
+  "description": "My personal portfolio.",
+  "homepage": "https://homepages.dcc.ufmg.br/~oliveiradaniel/",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/stemDaniel/portfolio/",
+    "type": "git"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,8 +20,32 @@
     "start": "next start"
   },
   "dependencies": {
+    "@chakra-ui/react": "^1.6.2",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "framer-motion": "^4",
     "next": "^10.0.0",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "@types/react": "^17.0.6"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/parser": "^4.17.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "4",
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier": "^2.1.0",
+    "typescript": "^4.2.4"
   }
 }
