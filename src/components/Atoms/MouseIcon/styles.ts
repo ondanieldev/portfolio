@@ -16,7 +16,7 @@ const updown = keyframes`
 `;
 
 export const Container = styled.div`
-  position: absolute;
+  position: fixed;
   left: 50%;
   bottom: 30px;
   width: 40px;
