@@ -73,6 +73,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['error', {
       'argsIgnorePattern': '_'
     }],
+    'import/no-extraneous-dependencies': 'off',
   },
   'settings': {
     'import/resolver': {

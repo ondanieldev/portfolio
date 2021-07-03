@@ -1,15 +1,23 @@
 import React from 'react';
 import { NextPage } from 'next';
-import { Container, Heading } from '@chakra-ui/react';
+import { Container, Flex } from '@chakra-ui/react';
 
-import Head from '../components/Head';
+import Head from '../components/Atoms/Head';
+import StackTitle from '../components/Molecules/StackTitle';
+import SocialBar from '../components/Molecules/SocialBar';
+import MouseIcon from '../components/Atoms/MouseIcon';
 
 const Home: NextPage = () => {
   return (
-    <Container>
+    <Container maxW="container.md" h="100vh">
       <Head title="Daniel Oliveira" />
 
-      <Heading color="teal.300">Hello, world!</Heading>
+      <Flex direction="column" justify="center" h="80%">
+        <StackTitle />
+        <SocialBar />
+      </Flex>
+
+      <MouseIcon />
     </Container>
   );
 };

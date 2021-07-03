@@ -23,13 +23,16 @@
     "@chakra-ui/react": "^1.6.2",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@types/react": "^17.0.6",
     "framer-motion": "^4",
     "next": "^10.0.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "@types/react": "^17.0.6"
+    "react-icons": "^4.2.0",
+    "styled-components": "^5.3.0"
   },
   "devDependencies": {
+    "@types/styled-components": "^5.1.9",
     "@typescript-eslint/eslint-plugin": "^4.17.0",
     "@typescript-eslint/parser": "^4.17.0",
     "eslint": "^7.2.0",
