@@ -8,7 +8,7 @@ import SocialBar from '../../Molecules/SocialBar';
 const Presentation: React.FC = () => {
   return (
     <Step>
-      <Flex direction="column" justify="center" h="80%">
+      <Flex direction="column" h="60%">
         <StackTitle />
         <SocialBar />
       </Flex>
