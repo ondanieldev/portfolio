@@ -38,7 +38,11 @@ const SocialBar: React.FC = () => {
       <Spacer />
       {socials.map((social, i) => (
         <>
-          <LinkBox key={i}>
+          <LinkBox
+            key={i}
+            transition="transform 0.15s linear"
+            _hover={{ transform: 'scale(1.2)' }}
+          >
             <CircularIcon icon={social.icon} />
             <LinkOverlay href={social.link} />
           </LinkBox>
