@@ -11,7 +11,7 @@ interface IProps {
 const CircularIcon: React.FC<IProps> = ({ icon }) => {
   return (
     <Container size={15}>
-      <Icon as={icon} boxSize="2em" />
+      <Icon as={icon} boxSize="25px" />
     </Container>
   );
 };

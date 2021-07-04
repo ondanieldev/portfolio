@@ -9,7 +9,7 @@ import Projects from '../components/Templates/Projects';
 
 const Home: NextPage = () => {
   return (
-    <Container maxW="container.md" h="100vh">
+    <Container maxW="container.md">
       <Head title="Daniel Oliveira" />
 
       <Presentation />
