@@ -6,6 +6,7 @@ import Head from '../components/Atoms/Head';
 import MouseIcon from '../components/Atoms/MouseIcon';
 import Presentation from '../components/Templates/Presentation';
 import Projects from '../components/Templates/Projects';
+import Skills from '../components/Templates/Skills';
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
 
       <Presentation />
       <Projects />
+      <Skills />
 
       <MouseIcon />
     </Container>
