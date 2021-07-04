@@ -1,6 +1,7 @@
 import React from 'react';
-import { Heading, Stack } from '@chakra-ui/react';
+import { Stack } from '@chakra-ui/react';
 
+import Heading from '../../Atoms/Heading';
 import InfoCard, { IProps as IInfoCardProps } from '../InfoCard';
 
 export interface IProps {
@@ -11,7 +12,7 @@ export interface IProps {
 const InfoGroup: React.FC<IProps> = ({ cards, title }) => {
   return (
     <Stack spacing="20px">
-      <Heading mb="10px">{title}</Heading>
+      <Heading mb="10px" text={title} />
       {cards.map((card, i) => (
         <InfoCard
           {...card}

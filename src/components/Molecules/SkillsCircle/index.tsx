@@ -1,7 +1,8 @@
 import React, { useMemo } from 'react';
-import { Heading, Icon } from '@chakra-ui/react';
+import { Icon } from '@chakra-ui/react';
 import { IconType } from 'react-icons';
 
+import Heading from '../../Atoms/Heading';
 import { Wrapper, Container } from './styles';
 
 export interface ICircle {
@@ -25,7 +26,7 @@ const SkillsCircle: React.FC<IProps> = ({ circles }) => {
 
   return (
     <Wrapper size={size}>
-      <Heading as="h2">Skills</Heading>
+      <Heading text="Skills" />
 
       {circles.map(circle => (
         <Container

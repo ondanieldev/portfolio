@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
-import { Flex, Heading } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 
+import Heading from '../../Atoms/Heading';
 import Project, { IProps as IProjectProps } from '../../Molecules/Project';
 import Carousel from '../../Organisms/Carousel';
 
@@ -30,9 +31,7 @@ const Projects: React.FC = () => {
 
   return (
     <Flex direction="column" align="center">
-      <Heading as="h2" mb="25px">
-        Projects
-      </Heading>
+      <Heading text="Projects" mb="25px" />
 
       <Carousel>
         {projects.map((project, i) => (
