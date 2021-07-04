@@ -4,17 +4,12 @@ import ProjectTag from '../../Atoms/ProjectTag';
 
 interface IProps {
   image: string;
-  alt_image: string;
+  imageAlt: string;
   techs: string[];
   description: string;
 }
 
-const Project: React.FC<IProps> = ({
-  alt_image,
-  description,
-  image,
-  techs,
-}) => {
+const Project: React.FC<IProps> = ({ imageAlt, description, image, techs }) => {
   return (
     <Box
       w="100%"
@@ -23,7 +18,7 @@ const Project: React.FC<IProps> = ({
       borderRadius="5px"
       overflow="hidden"
     >
-      <Image w="100%" maxH="300px" src={image} alt={alt_image} />
+      <Image w="100%" maxH="300px" src={image} alt={imageAlt} />
 
       <Box p="15px">
         <Stack direction="row" spacing="15px">
