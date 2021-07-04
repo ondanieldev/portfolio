@@ -7,7 +7,7 @@ import SocialBar from '../../Molecules/SocialBar';
 const Presentation: React.FC = () => {
   return (
     <Flex direction="column" justify="center" h="100vh" w="100%">
-      <StackTitle />
+      <StackTitle stacks={['Fullstack', 'Blockchain']} />
       <SocialBar />
     </Flex>
   );

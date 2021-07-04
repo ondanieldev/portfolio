@@ -1,13 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Avatar, Box, Flex, Heading } from '@chakra-ui/react';
 
-const StackTitle: React.FC = () => {
+import { StackContainer, StackSlider } from './styles';
+
+interface IProps {
+  stacks: string[];
+}
+
+const StackTitle: React.FC<IProps> = ({ stacks }) => {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const changeStack = setTimeout(() => {
+      const maxIndex = stacks.length - 1;
+      console.log(current, maxIndex);
+      if (current === maxIndex) {
+        setCurrent(0);
+      } else {
+        setCurrent(current + 1);
+      }
+    }, 5000);
+    return () => clearTimeout(changeStack);
+  }, [stacks, current]);
+
   return (
     <Flex justify="center">
       <Box mb="100px" mr="100px">
-        <Heading as="h1" size="4xl">
-          Fullstack
-        </Heading>
+        <StackContainer key={current}>
+          <StackSlider />
+          <Heading as="h1" size="4xl">
+            {stacks[current]}
+          </Heading>
+        </StackContainer>
         <Heading as="h1" size="4xl">
           Developer
         </Heading>
