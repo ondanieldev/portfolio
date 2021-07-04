@@ -18,7 +18,6 @@ import { Wrapper, Container } from './styles';
 
 interface ICircle {
   circleSize: number;
-  itemCount: number;
   itemSize: number;
   icons: {
     icon: IconType;
@@ -30,7 +29,6 @@ const SkillsCircle: React.FC = () => {
   const backend = useMemo<ICircle>(
     () => ({
       circleSize: 200,
-      itemCount: 4,
       itemSize: 50,
       icons: [
         { icon: SiNodeDotJs, color: '#339933' },
@@ -45,7 +43,6 @@ const SkillsCircle: React.FC = () => {
   const frontend = useMemo<ICircle>(
     () => ({
       circleSize: 350,
-      itemCount: 2,
       itemSize: 50,
       icons: [
         { icon: SiReact, color: '#61DAFB' },
@@ -58,7 +55,6 @@ const SkillsCircle: React.FC = () => {
   const devops = useMemo<ICircle>(
     () => ({
       circleSize: 500,
-      itemCount: 4,
       itemSize: 50,
       icons: [
         { icon: SiDocker, color: '#2496ED' },
@@ -74,7 +70,7 @@ const SkillsCircle: React.FC = () => {
     <Wrapper>
       <Container
         circleSize={backend.circleSize}
-        itemCount={backend.itemCount}
+        itemCount={backend.icons.length}
         itemSize={backend.itemSize}
       >
         {backend.icons.map(icon => (
@@ -84,7 +80,7 @@ const SkillsCircle: React.FC = () => {
 
       <Container
         circleSize={frontend.circleSize}
-        itemCount={frontend.itemCount}
+        itemCount={frontend.icons.length}
         itemSize={frontend.itemSize}
       >
         {frontend.icons.map(icon => (
@@ -94,7 +90,7 @@ const SkillsCircle: React.FC = () => {
 
       <Container
         circleSize={devops.circleSize}
-        itemCount={devops.itemCount}
+        itemCount={devops.icons.length}
         itemSize={devops.itemSize}
       >
         {devops.icons.map(icon => (
