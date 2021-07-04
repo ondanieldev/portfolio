@@ -5,9 +5,11 @@ import { StackContainer, StackSlider } from './styles';
 
 interface IProps {
   stacks: string[];
+  name: string;
+  photo: string;
 }
 
-const StackTitle: React.FC<IProps> = ({ stacks }) => {
+const StackTitle: React.FC<IProps> = ({ stacks, name, photo }) => {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -36,11 +38,7 @@ const StackTitle: React.FC<IProps> = ({ stacks }) => {
         </Heading>
       </Box>
 
-      <Avatar
-        size="2xl"
-        name="Daniel Oliveira"
-        src="https://avatars.githubusercontent.com/u/50562390?v=4"
-      />
+      <Avatar size="2xl" name={name} src={photo} bg="white" />
     </Flex>
   );
 };
