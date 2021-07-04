@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Image, Stack, Text } from '@chakra-ui/react';
+
 import ProjectTag from '../../Atoms/ProjectTag';
 
 interface IProps {
