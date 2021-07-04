@@ -1,4 +1,9 @@
-import styled, { css } from 'styled-components';
+import styled, {
+  css,
+  FlattenInterpolation,
+  keyframes,
+  ThemeProps,
+} from 'styled-components';
 
 interface IProps {
   itemCount: number;
@@ -10,22 +15,64 @@ interface IWrapperProps {
   size: number;
 }
 
-const calcRotate = ({ circleSize, itemCount }: IProps) => {
-  let styles = '';
-  let rot = 0;
+interface IPlanetProps extends IProps {
+  currentItem: number;
+}
+
+interface IInitialPosition {
+  rotate: number;
+  translate: number;
+}
+
+const planetRotation = ({ rotate, translate }: IInitialPosition) => {
+  const newRotate = 360 + rotate;
+
+  return keyframes`
+    from {
+      transform: rotate(${rotate}deg) translate($translate}px) rotate(${-rotate}deg);
+    }
+    to {
+      transform: rotate(${newRotate}deg) translate(${translate}px) rotate(${-newRotate}deg);
+    }
+  `;
+};
+
+const calcInitialPosition = ({
+  circleSize,
+  itemCount,
+  currentItem,
+}: IPlanetProps): IInitialPosition => {
   const angle = 360 / itemCount;
+  const rotate = (currentItem - 1) * angle;
+  const translate = circleSize / 2;
+
+  return { rotate, translate };
+};
+
+const calcStyles = ({ circleSize, itemCount, itemSize }: IProps) => {
+  const styles = [] as FlattenInterpolation<ThemeProps<any>>[];
 
   for (let i = 1; i <= itemCount; ++i) {
-    styles += css`
+    const { rotate, translate } = calcInitialPosition({
+      circleSize,
+      itemCount,
+      itemSize,
+      currentItem: i,
+    });
+
+    const style = css`
       &:nth-of-type(${i}) {
-        transform: rotate(${rot}deg) translate(${circleSize / 2}px)
-          rotate(${rot * -1}deg);
+        transform: rotate(${rotate}deg) translate(${translate}px)
+          rotate(${-rotate}deg);
+        animation: ${() => planetRotation({ rotate, translate })}
+          ${(circleSize * 20) / 100}s linear infinite;
       }
     `;
-    rot += angle;
+
+    styles.push(style);
   }
 
-  return styles.replace(/,/g, '');
+  return styles;
 };
 
 export const Wrapper = styled.div<IWrapperProps>`
@@ -54,6 +101,6 @@ export const Container = styled.div<IProps>`
     height: ${({ itemSize }) => itemSize}px;
     margin: ${({ itemSize }) => (itemSize / 2) * -1}px;
 
-    ${props => calcRotate(props)}
+    ${props => calcStyles(props)}
   }
 `;
