@@ -1,6 +1,6 @@
 import React from 'react';
 import { NextPage } from 'next';
-import { Container } from '@chakra-ui/react';
+import { Container, Stack } from '@chakra-ui/react';
 
 import Head from '../components/Atoms/Head';
 import MouseIcon from '../components/Atoms/MouseIcon';
@@ -15,9 +15,11 @@ const Home: NextPage = () => {
       <Head title="Daniel Oliveira" />
 
       <Presentation />
-      <Projects />
-      <Skills />
-      <Info />
+      <Stack spacing="150px" mb="150px">
+        <Projects />
+        <Skills />
+        <Info />
+      </Stack>
 
       <MouseIcon />
     </Container>

@@ -1,13 +1,12 @@
 import React from 'react';
-import { Heading } from '@chakra-ui/react';
+import { Flex, Heading } from '@chakra-ui/react';
 
-import Step from '../../Atoms/Step';
 import Project from '../../Molecules/Project';
 import Carousel from '../../Organisms/Carousel';
 
 const Projects: React.FC = () => {
   return (
-    <Step>
+    <Flex direction="column" align="center">
       <Heading as="h2" mb="25px">
         Projects
       </Heading>
@@ -32,7 +31,7 @@ const Projects: React.FC = () => {
           techs={['PHP', 'Python', 'GraphQL']}
         />
       </Carousel>
-    </Step>
+    </Flex>
   );
 };
 
