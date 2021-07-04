@@ -13,7 +13,6 @@ const StackTitle: React.FC<IProps> = ({ stacks }) => {
   useEffect(() => {
     const changeStack = setTimeout(() => {
       const maxIndex = stacks.length - 1;
-      console.log(current, maxIndex);
       if (current === maxIndex) {
         setCurrent(0);
       } else {
