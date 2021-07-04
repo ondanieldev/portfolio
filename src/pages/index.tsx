@@ -16,8 +16,8 @@ const Home: NextPage = () => {
 
       <Presentation />
       <Stack spacing="150px" mb="150px">
-        <Projects />
         <Skills />
+        <Projects />
         <Info />
       </Stack>
 
