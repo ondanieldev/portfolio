@@ -43,7 +43,6 @@ module.exports = {
     'react/jsx-curly-newline': 'off',
     'react/jsx-one-expression-per-line': 'off',
     'no-empty': 'off',
-    'camelcase': 'off',
     'no-param-reassign': 'off',
     'no-plusplus': 'off',
     '@typescript-eslint/no-empty-function': 'off',

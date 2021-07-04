@@ -6,6 +6,10 @@ interface IProps {
   itemSize: number;
 }
 
+interface IWrapperProps {
+  size: number;
+}
+
 const calcRotate = ({ circleSize, itemCount }: IProps) => {
   let styles = '';
   let rot = 0;
@@ -24,7 +28,9 @@ const calcRotate = ({ circleSize, itemCount }: IProps) => {
   return styles.replace(/,/g, '');
 };
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<IWrapperProps>`
+  width: 100%;
+  height: ${({ size }) => size}px;
   position: relative;
   display: flex;
   justify-content: center;

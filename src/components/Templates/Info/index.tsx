@@ -1,7 +1,6 @@
 import React, { useMemo } from 'react';
 import { Wrap, WrapItem } from '@chakra-ui/react';
 
-import Step from '../../Atoms/Step';
 import InfoGroup, {
   IProps as IInfoGroupProps,
 } from '../../Molecules/InfoGroup';
@@ -27,19 +26,17 @@ const Info: React.FC = () => {
   );
 
   return (
-    <Step>
-      <Wrap spacing="20px" justify="center" align="center">
-        <WrapItem>
-          <InfoGroup {...education} />
-        </WrapItem>
-        <WrapItem>
-          <InfoGroup {...education} />
-        </WrapItem>
-        <WrapItem>
-          <InfoGroup {...education} />
-        </WrapItem>
-      </Wrap>
-    </Step>
+    <Wrap spacing="20px" justify="center" align="center">
+      <WrapItem>
+        <InfoGroup {...education} />
+      </WrapItem>
+      <WrapItem>
+        <InfoGroup {...education} />
+      </WrapItem>
+      <WrapItem>
+        <InfoGroup {...education} />
+      </WrapItem>
+    </Wrap>
   );
 };
 
