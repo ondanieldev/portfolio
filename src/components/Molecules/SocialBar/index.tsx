@@ -34,9 +34,9 @@ const SocialBar: React.FC = () => {
   return (
     <Flex justify="center">
       <Spacer />
-      {socials.map(social => (
+      {socials.map((social, i) => (
         <>
-          <LinkBox>
+          <LinkBox key={i}>
             <CircularIcon icon={social.icon} />
             <LinkOverlay href={social.link} />
           </LinkBox>
