@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { NextPage } from 'next';
 import { Container, Stack } from '@chakra-ui/react';
 
@@ -10,8 +10,10 @@ import Skills from '../components/Templates/Skills';
 import Info from '../components/Templates/Info';
 
 const Home: NextPage = () => {
+  const ref = useRef<HTMLDivElement>(null);
+
   return (
-    <Container maxW="container.lg">
+    <Container maxW="container.lg" ref={ref}>
       <Head title="Daniel Oliveira" />
 
       <Presentation />
@@ -21,7 +23,7 @@ const Home: NextPage = () => {
         <Info />
       </Stack>
 
-      <MouseIcon />
+      <MouseIcon pageRef={ref} />
     </Container>
   );
 };
