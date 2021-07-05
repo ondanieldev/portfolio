@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { Icon } from '@chakra-ui/react';
+import { Icon, useBreakpointValue } from '@chakra-ui/react';
 import { IconType } from 'react-icons';
 
 import Heading from '../../Atoms/Heading';
@@ -19,20 +19,30 @@ export interface IProps {
 }
 
 const SkillsCircle: React.FC<IProps> = ({ circles }) => {
+  const isMobile = useBreakpointValue({
+    base: true,
+    sm: false,
+  });
+  const titleMargin = useBreakpointValue({
+    base: '50px',
+    sm: '0',
+  });
+
   const size = useMemo(() => {
     const index = circles.length - 1;
     return circles[index].circleSize + circles[index].itemSize;
   }, [circles]);
 
   return (
-    <Wrapper size={size}>
-      <Heading text="Skills" />
+    <Wrapper size={size} isMobile={isMobile}>
+      <Heading text="Skills" mb={titleMargin} />
 
       {circles.map(circle => (
         <Container
           circleSize={circle.circleSize}
           itemCount={circle.icons.length}
           itemSize={circle.itemSize}
+          isMobile={isMobile}
         >
           {circle.icons.map(icon => (
             <Icon as={icon.icon} color={icon.color} />

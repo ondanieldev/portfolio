@@ -16,7 +16,7 @@ const InfoCard: React.FC<IProps> = ({
   ...rest
 }) => {
   return (
-    <Flex maxW="300px">
+    <Flex w="100%">
       {direction === 'left' && <Text {...rest}>{text}</Text>}
       <Image
         borderRadius="full"

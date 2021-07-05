@@ -1,6 +1,6 @@
 import React from 'react';
 import { IconType } from 'react-icons';
-import { Flex, LinkBox, LinkOverlay, Spacer } from '@chakra-ui/react';
+import { LinkBox, LinkOverlay, Wrap } from '@chakra-ui/react';
 
 import CircularIcon from '../../Atoms/CircularIcon';
 
@@ -15,8 +15,7 @@ interface IProps {
 
 const SocialBar: React.FC<IProps> = ({ socials }) => {
   return (
-    <Flex justify="center">
-      <Spacer />
+    <Wrap justify="center" spacing="50px">
       {socials.map((social, i) => (
         <>
           <LinkBox
@@ -27,10 +26,9 @@ const SocialBar: React.FC<IProps> = ({ socials }) => {
             <CircularIcon icon={social.icon} />
             <LinkOverlay href={social.link} />
           </LinkBox>
-          <Spacer />
         </>
       ))}
-    </Flex>
+    </Wrap>
   );
 };
 
