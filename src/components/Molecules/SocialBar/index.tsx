@@ -24,7 +24,7 @@ const SocialBar: React.FC<IProps> = ({ socials }) => {
             _hover={{ transform: 'scale(1.2)' }}
           >
             <CircularIcon icon={social.icon} />
-            <LinkOverlay href={social.link} />
+            <LinkOverlay href={social.link} isExternal />
           </LinkBox>
         </>
       ))}

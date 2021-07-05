@@ -37,7 +37,7 @@ const Project: React.FC<IProps> = ({
       borderRadius="5px"
       overflow="hidden"
     >
-      <LinkOverlay href={link} external />
+      <LinkOverlay href={link} isExternal />
 
       <Image w="100%" maxH="300px" src={image} alt={imageAlt} />
 
