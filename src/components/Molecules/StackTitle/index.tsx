@@ -1,14 +1,33 @@
 import React, { useEffect, useState } from 'react';
-import { Avatar, Box, Flex, Heading } from '@chakra-ui/react';
+import {
+  Avatar,
+  Box,
+  Flex,
+  Heading,
+  useBreakpointValue,
+} from '@chakra-ui/react';
 
 import { StackContainer, StackSlider } from './styles';
 
 interface IProps {
   stacks: string[];
+  name: string;
+  photo: string;
 }
 
-const StackTitle: React.FC<IProps> = ({ stacks }) => {
+const StackTitle: React.FC<IProps> = ({ stacks, name, photo }) => {
   const [current, setCurrent] = useState(0);
+
+  const containerJustify = useBreakpointValue({
+    base: 'space-between',
+    md: 'center',
+  });
+  const titleSize = useBreakpointValue({ base: '3xl', sm: '4xl' });
+  const avatarSize = useBreakpointValue({
+    base: 'lg',
+    sm: '2xl',
+  });
+  const avatarMargin = useBreakpointValue({ base: '0', md: '100px' });
 
   useEffect(() => {
     const changeStack = setTimeout(() => {
@@ -23,24 +42,20 @@ const StackTitle: React.FC<IProps> = ({ stacks }) => {
   }, [stacks, current]);
 
   return (
-    <Flex justify="center">
-      <Box mb="100px" mr="100px">
+    <Flex justify={containerJustify}>
+      <Box mb="100px" mr={avatarMargin}>
         <StackContainer key={current}>
           <StackSlider />
-          <Heading as="h1" size="4xl">
+          <Heading as="h1" size={titleSize}>
             {stacks[current]}
           </Heading>
         </StackContainer>
-        <Heading as="h1" size="4xl">
+        <Heading as="h1" size={titleSize}>
           Developer
         </Heading>
       </Box>
 
-      <Avatar
-        size="2xl"
-        name="Daniel Oliveira"
-        src="https://avatars.githubusercontent.com/u/50562390?v=4"
-      />
+      <Avatar size={avatarSize} name={name} src={photo} bg="white" />
     </Flex>
   );
 };

@@ -9,10 +9,12 @@ interface IProps {
   itemCount: number;
   circleSize: number;
   itemSize: number;
+  isMobile?: boolean;
 }
 
 interface IWrapperProps {
   size: number;
+  isMobile?: boolean;
 }
 
 interface IPlanetProps extends IProps {
@@ -82,6 +84,13 @@ export const Wrapper = styled.div<IWrapperProps>`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  ${({ isMobile }) =>
+    isMobile &&
+    css`
+      flex-direction: column;
+      height: 100%;
+    `}
 `;
 
 export const Container = styled.div<IProps>`
@@ -91,6 +100,16 @@ export const Container = styled.div<IProps>`
   height: ${({ circleSize }) => circleSize}px;
   border-radius: 50%;
   border: 1px dotted #4a5568;
+
+  ${({ isMobile }) =>
+    isMobile &&
+    css`
+      position: relative;
+
+      & + div {
+        margin-top: 75px;
+      }
+    `}
 
   svg {
     position: absolute;

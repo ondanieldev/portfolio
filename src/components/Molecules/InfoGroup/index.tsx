@@ -1,6 +1,7 @@
 import React from 'react';
-import { Heading, Stack } from '@chakra-ui/react';
+import { Stack, useBreakpointValue } from '@chakra-ui/react';
 
+import Heading from '../../Atoms/Heading';
 import InfoCard, { IProps as IInfoCardProps } from '../InfoCard';
 
 export interface IProps {
@@ -9,9 +10,15 @@ export interface IProps {
 }
 
 const InfoGroup: React.FC<IProps> = ({ cards, title }) => {
+  const maxWidth = useBreakpointValue({
+    base: '100%',
+    sm: '500px',
+    md: '300px',
+  });
+
   return (
-    <Stack spacing="20px">
-      <Heading mb="10px">{title}</Heading>
+    <Stack spacing="25px" maxW={maxWidth}>
+      <Heading mb="10px" text={title} />
       {cards.map((card, i) => (
         <InfoCard
           {...card}

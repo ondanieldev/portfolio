@@ -26,7 +26,7 @@ const Info: React.FC = () => {
   );
 
   return (
-    <Wrap spacing="20px" justify="center" align="center">
+    <Wrap spacing="45px" justify="center" align="center">
       <WrapItem>
         <InfoGroup {...education} />
       </WrapItem>

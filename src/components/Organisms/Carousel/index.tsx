@@ -1,11 +1,16 @@
 import React, { useCallback, useState } from 'react';
-import { Icon } from '@chakra-ui/react';
+import { Icon, useBreakpointValue } from '@chakra-ui/react';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 
 import { Forward, Backward, Container, Slide } from './styles';
 
 const Carousel: React.FC = ({ children }) => {
   const [current, setCurrent] = useState(0);
+
+  const isMobile = useBreakpointValue({
+    base: true,
+    lg: false,
+  });
 
   const handleBackward = useCallback(() => {
     if (!Array.isArray(children)) {
@@ -35,15 +40,15 @@ const Carousel: React.FC = ({ children }) => {
 
   return (
     <Container>
-      <Backward onClick={handleBackward}>
-        <Icon as={FaAngleLeft} boxSize={25} />
-      </Backward>
-
       <Slide>
         <div key={current}>{children[current] || children || <></>}</div>
       </Slide>
 
-      <Forward onClick={handleForward}>
+      <Backward onClick={handleBackward} isMobile={isMobile}>
+        <Icon as={FaAngleLeft} boxSize={25} />
+      </Backward>
+
+      <Forward onClick={handleForward} isMobile={isMobile}>
         <Icon as={FaAngleRight} boxSize={25} />
       </Forward>
     </Container>

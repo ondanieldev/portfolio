@@ -1,4 +1,8 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
+
+interface IControlProps {
+  isMobile?: boolean;
+}
 
 const fadeIn = keyframes`
   from {
@@ -20,12 +24,18 @@ export const Container = styled.div`
   align-items: center;
 `;
 
-export const Control = styled.div`
+export const Control = styled.div<IControlProps>`
   position: absolute;
   z-index: 100;
   cursor: pointer;
   transition-duration: 0.25s;
   user-select: none;
+
+  ${({ isMobile }) =>
+    isMobile &&
+    css`
+      bottom: -50px;
+    `}
 
   span {
     position: relative;
