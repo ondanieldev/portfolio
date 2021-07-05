@@ -1,5 +1,14 @@
 import React from 'react';
-import { Box, Heading, Image, Stack, Text } from '@chakra-ui/react';
+import {
+  Box,
+  Heading,
+  Image,
+  Text,
+  Wrap,
+  WrapItem,
+  LinkBox,
+  LinkOverlay,
+} from '@chakra-ui/react';
 
 import ProjectTag from '../../Atoms/ProjectTag';
 
@@ -9,6 +18,7 @@ export interface IProps {
   techs: string[];
   description: string;
   title: string;
+  link: string;
 }
 
 const Project: React.FC<IProps> = ({
@@ -17,15 +27,18 @@ const Project: React.FC<IProps> = ({
   image,
   techs,
   title,
+  link,
 }) => {
   return (
-    <Box
+    <LinkBox
       w="100%"
       maxW="600px"
       borderWidth="2px"
       borderRadius="5px"
       overflow="hidden"
     >
+      <LinkOverlay href={link} external />
+
       <Image w="100%" maxH="300px" src={image} alt={imageAlt} />
 
       <Box p="15px">
@@ -33,17 +46,19 @@ const Project: React.FC<IProps> = ({
           {title}
         </Heading>
 
-        <Stack direction="row" spacing="15px">
+        <Wrap direction="row" spacing="15px">
           {techs.map((tech, i) => (
-            <ProjectTag key={i} text={tech} />
+            <WrapItem key={i}>
+              <ProjectTag text={tech} />
+            </WrapItem>
           ))}
-        </Stack>
+        </Wrap>
 
         <Text mt="10px" fontWeight="semibold">
           {description}
         </Text>
       </Box>
-    </Box>
+    </LinkBox>
   );
 };
 
