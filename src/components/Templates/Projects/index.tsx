@@ -13,9 +13,9 @@ const Projects: React.FC = () => {
         imageAlt: 'Wellets',
         techs: [
           'typescript',
-          'node',
+          'node.js',
           'react',
-          'postgres',
+          'postgresql',
           'redis',
           'docker',
           'nginx',
@@ -32,10 +32,10 @@ const Projects: React.FC = () => {
         imageAlt: 'Koinzaar',
         techs: [
           'typescript',
-          'node',
+          'node.js',
           'react',
           'mysql',
-          'mongodb',
+          'mongo',
           'redis',
           'docker',
           'git',
@@ -51,7 +51,7 @@ const Projects: React.FC = () => {
         imageAlt: 'Battlestation',
         techs: [
           'typescript',
-          'node',
+          'node.js',
           'react',
           'postgresql',
           'docker',
@@ -77,7 +77,7 @@ const Projects: React.FC = () => {
         imageAlt: 'Cowop',
         techs: [
           'typescript',
-          'node',
+          'node.js',
           'postgresql',
           'docker',
           'git',

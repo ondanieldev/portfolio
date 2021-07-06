@@ -30,13 +30,7 @@ const Project: React.FC<IProps> = ({
   link,
 }) => {
   return (
-    <LinkBox
-      w="100%"
-      maxW="600px"
-      borderWidth="2px"
-      borderRadius="5px"
-      overflow="hidden"
-    >
+    <LinkBox w="100%" borderWidth="2px" borderRadius="5px" overflow="hidden">
       <LinkOverlay href={link} isExternal />
 
       <Image w="100%" maxH="300px" src={image} alt={imageAlt} />
