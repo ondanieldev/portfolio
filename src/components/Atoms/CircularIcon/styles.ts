@@ -1,0 +1,10 @@
+import styled from 'styled-components';
+
+export const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+`;
