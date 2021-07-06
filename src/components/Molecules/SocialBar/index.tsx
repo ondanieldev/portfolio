@@ -17,16 +17,14 @@ const SocialBar: React.FC<IProps> = ({ socials }) => {
   return (
     <Wrap justify="center" spacing="50px">
       {socials.map((social, i) => (
-        <>
-          <LinkBox
-            key={i}
-            transition="transform 0.15s linear"
-            _hover={{ transform: 'scale(1.2)' }}
-          >
-            <CircularIcon icon={social.icon} />
-            <LinkOverlay href={social.link} isExternal />
-          </LinkBox>
-        </>
+        <LinkBox
+          key={i}
+          transition="transform 0.15s linear"
+          _hover={{ transform: 'scale(1.2)' }}
+        >
+          <CircularIcon icon={social.icon} />
+          <LinkOverlay href={social.link} isExternal />
+        </LinkBox>
       ))}
     </Wrap>
   );
