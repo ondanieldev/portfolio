@@ -18,10 +18,6 @@ interface IProps {
 const StackTitle: React.FC<IProps> = ({ stacks, name, photo }) => {
   const [current, setCurrent] = useState(0);
 
-  const containerJustify = useBreakpointValue({
-    base: 'space-between',
-    md: 'center',
-  });
   const titleSize = useBreakpointValue({ base: '3xl', sm: '4xl' });
   const avatarSize = useBreakpointValue({
     base: 'lg',
@@ -42,20 +38,22 @@ const StackTitle: React.FC<IProps> = ({ stacks, name, photo }) => {
   }, [stacks, current]);
 
   return (
-    <Flex justify={containerJustify}>
-      <Box mb="100px" mr={avatarMargin}>
-        <StackContainer key={current}>
-          <StackSlider />
+    <Flex justify="center">
+      <Flex justify="space-between" w="100%" maxW="700px">
+        <Box mb="100px" mr={avatarMargin}>
+          <StackContainer key={current}>
+            <StackSlider />
+            <Heading as="h1" size={titleSize}>
+              {stacks[current]}
+            </Heading>
+          </StackContainer>
           <Heading as="h1" size={titleSize}>
-            {stacks[current]}
+            Developer
           </Heading>
-        </StackContainer>
-        <Heading as="h1" size={titleSize}>
-          Developer
-        </Heading>
-      </Box>
+        </Box>
 
-      <Avatar size={avatarSize} name={name} src={photo} bg="white" />
+        <Avatar size={avatarSize} name={name} src={photo} bg="white" />
+      </Flex>
     </Flex>
   );
 };

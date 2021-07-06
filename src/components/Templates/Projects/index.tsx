@@ -34,6 +34,7 @@ const Projects: React.FC = () => {
           'typescript',
           'node.js',
           'react',
+          'next.js',
           'mysql',
           'mongo',
           'redis',
