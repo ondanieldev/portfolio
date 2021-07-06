@@ -42,7 +42,7 @@ const Project: React.FC<IProps> = ({
       />
 
       <Box p="15px">
-        <Heading mb="10px" as="h3" size="md" fontWeight="bold">
+        <Heading mb="10px" as="h3" size="md">
           {title}
         </Heading>
 
@@ -54,7 +54,7 @@ const Project: React.FC<IProps> = ({
           ))}
         </Wrap>
 
-        <Text mt="10px" fontWeight="semibold">
+        <Text mt="10px" fontSize="1.2em">
           {description}
         </Text>
       </Box>

@@ -8,6 +8,7 @@ import Presentation from '../components/Templates/Presentation';
 import Projects from '../components/Templates/Projects';
 import Skills from '../components/Templates/Skills';
 import Info from '../components/Templates/Info';
+import About from '../components/Templates/About';
 
 const Home: NextPage = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -21,6 +22,7 @@ const Home: NextPage = () => {
         <Skills />
         <Projects />
         <Info />
+        <About />
       </Stack>
 
       <MouseIcon pageRef={ref} />

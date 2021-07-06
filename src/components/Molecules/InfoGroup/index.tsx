@@ -18,13 +18,9 @@ const InfoGroup: React.FC<IProps> = ({ cards, title }) => {
 
   return (
     <Stack spacing="25px" maxW={maxWidth}>
-      <Heading mb="10px" text={title} />
+      <Heading alignSelf="center" mb="10px" text={title} />
       {cards.map((card, i) => (
-        <InfoCard
-          {...card}
-          direction={i % 2 === 0 ? 'right' : 'left'}
-          key={i}
-        />
+        <InfoCard {...card} key={i} />
       ))}
     </Stack>
   );
