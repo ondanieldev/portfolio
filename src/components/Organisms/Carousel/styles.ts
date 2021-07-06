@@ -25,6 +25,10 @@ export const Container = styled.div`
 `;
 
 export const Control = styled.div<IControlProps>`
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
   position: absolute;
   z-index: 100;
   cursor: pointer;
@@ -42,7 +46,7 @@ export const Control = styled.div<IControlProps>`
   }
 
   &:hover {
-    transform: scale(1.2);
+    background-color: rgba(0, 0, 0, 0.5);
   }
 `;
 

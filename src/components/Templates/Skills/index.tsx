@@ -15,6 +15,7 @@ import {
   SiPostgresql,
   SiMysql,
   SiMongodb,
+  SiRedis,
 } from 'react-icons/si';
 
 import SolidityIcon from '../../Atoms/SolidityIcon';
@@ -70,6 +71,7 @@ const Skills: React.FC = () => {
         { icon: SiPostgresql, color: '#4169E1' },
         { icon: SiMysql, color: '#4479A1' },
         { icon: SiMongodb, color: '#47A248' },
+        { icon: SiRedis, color: '#DC382D' },
       ],
     }),
     [baseCircleSize, circleSizeMultiplier, baseItemSize],

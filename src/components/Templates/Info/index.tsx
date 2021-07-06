@@ -6,19 +6,75 @@ import InfoGroup, {
 } from '../../Molecules/InfoGroup';
 
 const Info: React.FC = () => {
+  const orgs = useMemo<IInfoGroupProps>(
+    () => ({
+      title: 'Orgs',
+      cards: [
+        {
+          title: 'Spiry Capital',
+          subtitle: 'Romania',
+          text: 'Fullstack and blockchain developer',
+          link: 'https://spiry.ro/',
+          image: 'https://i.imgur.com/htQBXTT.png',
+          imageAlt: 'Spiry Capital',
+        },
+        {
+          title: 'Frenchie Network',
+          subtitle: 'Romania',
+          text: 'Fullstack and blockchain developer',
+          link: 'https://frenchie.tech/',
+          image: 'https://i.imgur.com/9L5bOoS.png',
+          imageAlt: 'Frenchie Network',
+        },
+        {
+          title: 'League of Devs',
+          subtitle: 'Brazil',
+          text: 'Founder & Fullcycle developer',
+          link: 'https://www.leagueofdevs.com.br/',
+          image: 'https://i.imgur.com/OPRDMii.png?1',
+          imageAlt: 'League of Devs',
+        },
+      ],
+    }),
+    [],
+  );
+
   const education = useMemo<IInfoGroupProps>(
     () => ({
       title: 'Education',
       cards: [
         {
-          image: 'https://bit.ly/sage-adebayo',
-          imageAlt: 'Segun Adebayo',
-          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+          title: 'SENAI',
+          subtitle: 'Brazil',
+          text: 'Technical degree in Software Development',
+          link: 'https://www.senaimg.com.br:543/',
+          image: 'https://i.imgur.com/P1OJIrg.jpg',
+          imageAlt: 'SENAI',
         },
         {
-          image: 'https://bit.ly/sage-adebayo',
-          imageAlt: 'Segun Adebayo',
-          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+          title: 'UFMG',
+          subtitle: 'Brazil',
+          text: "Bachelor's degree in Information Systems",
+          link: 'https://ufmg.br/',
+          image: 'https://i.imgur.com/WULjXy8.jpg',
+          imageAlt: 'UFMG',
+        },
+      ],
+    }),
+    [],
+  );
+
+  const achievements = useMemo<IInfoGroupProps>(
+    () => ({
+      title: 'Achievements',
+      cards: [
+        {
+          title: 'FLL',
+          subtitle: 'Brazil',
+          text: '3rd place in the Minas Gerais regional of the FLL robotics tournament',
+          link: 'https://www.firstlegoleague.org/',
+          image: 'https://i.imgur.com/mFuuab9.jpg',
+          imageAlt: 'FLL',
         },
       ],
     }),
@@ -26,15 +82,15 @@ const Info: React.FC = () => {
   );
 
   return (
-    <Wrap spacing="45px" justify="center" align="center">
+    <Wrap spacing="45px" justify="center">
       <WrapItem>
-        <InfoGroup {...education} />
+        <InfoGroup {...orgs} />
       </WrapItem>
       <WrapItem>
         <InfoGroup {...education} />
       </WrapItem>
       <WrapItem>
-        <InfoGroup {...education} />
+        <InfoGroup {...achievements} />
       </WrapItem>
     </Wrap>
   );
