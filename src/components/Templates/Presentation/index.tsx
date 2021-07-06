@@ -35,7 +35,7 @@ const Presentation: React.FC = () => {
       <StackTitle
         stacks={stacks}
         name="Daniel Oliveira"
-        photo="https://isExternal-content.duckduckgo.com/iu/?u=http%3A%2F%2Fst.elohell.net%2Fpublic%2Fchill%2F83eac3fc45a884d252f24a08d6cdad98.png&f=1&nofb=1"
+        photo="/images/avatar.jpeg"
       />
       <SocialBar socials={socials} />
     </Flex>

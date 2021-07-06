@@ -23,7 +23,7 @@ const Projects: React.FC = () => {
           'github',
         ],
         link: 'https://wellets.ondaniel.com.br/',
-        image: 'https://i.imgur.com/5PCXAvW.png',
+        image: '/images/wellets.png',
         description:
           'Wellets is a financial management website that helps users to manage their money placed in multiple portfolios. It was developed with a focus on users engaged in the crypto world.',
       },
@@ -43,7 +43,7 @@ const Projects: React.FC = () => {
           'github',
         ],
         link: 'https://www.koinzaar.com/',
-        image: 'https://i.imgur.com/4Q9q1JE.png',
+        image: '/images/koinzaar.png',
         description:
           'Koinzaar a multi-cryptocurrency P2P Platform that enables users to buy and sell Cryptocurrencies using a wide range of payment methods offered by other users from their country or worldwide.',
       },
@@ -60,7 +60,7 @@ const Projects: React.FC = () => {
           'github',
         ],
         link: 'https://dashboard.spiry.ro/',
-        image: 'https://i.imgur.com/0wGE35h.png',
+        image: '/images/battlestation.png',
         description:
           'Battlestation is a SaaS that unifies trades of Paxful and Koinzaar to help users to manage them.',
       },
@@ -68,8 +68,8 @@ const Projects: React.FC = () => {
         title: 'Frenchie',
         imageAlt: 'Frenchie',
         techs: ['go', 'solidity', 'git', 'github'],
-        image: 'https://i.imgur.com/EkpecEl.png',
         link: 'https://frenchie.tech/',
+        image: '/images/frenchie.png',
         description:
           'Frenchie is a decentralized token running in the BSC network. Built using BEP20 and Solidity, audited and secured by professionals. It will be migrated to Main Net by Q1-2022.',
       },
@@ -86,7 +86,7 @@ const Projects: React.FC = () => {
           'not relesead',
         ],
         link: 'https://www.leagueofdevs.com.br/',
-        image: 'https://i.imgur.com/hxZ8sFd.png',
+        image: '/images/cowop.png',
         description:
           'Cowop is a technology education platform that helps users to interact with each other to offer their classes and learn about a specific technology.',
       },

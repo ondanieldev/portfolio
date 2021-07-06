@@ -35,7 +35,6 @@ const InfoCard: React.FC<IProps> = ({
           src={image}
           alt={imageAlt}
           mr="10px"
-          backgroundColor="white"
         />
         <Box>
           <Heading as="h3" size="md" mb="5px">
