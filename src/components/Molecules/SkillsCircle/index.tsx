@@ -34,18 +34,19 @@ const SkillsCircle: React.FC<IProps> = ({ circles }) => {
   }, [circles]);
 
   return (
-    <Wrapper size={size} isMobile={isMobile}>
+    <Wrapper size={size || 0} isMobile={isMobile}>
       <Heading text="Skills" mb={titleMargin} />
 
-      {circles.map(circle => (
+      {circles.map((circle, i) => (
         <Container
           circleSize={circle.circleSize}
           itemCount={circle.icons.length}
           itemSize={circle.itemSize}
           isMobile={isMobile}
+          key={i}
         >
-          {circle.icons.map(icon => (
-            <Icon as={icon.icon} color={icon.color} />
+          {circle.icons.map((icon, j) => (
+            <Icon key={j} as={icon.icon} color={icon.color} />
           ))}
         </Container>
       ))}
