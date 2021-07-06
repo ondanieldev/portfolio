@@ -1,7 +1,6 @@
 import React, {
   useCallback,
   useEffect,
-  useLayoutEffect,
   useState,
   MutableRefObject,
 } from 'react';
@@ -22,12 +21,12 @@ const MouseIcon: React.FC<IProps> = ({ pageRef }) => {
     setTime(0);
   }, []);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const timer = setInterval(() => {
       setTime(time + 1);
     }, 1000);
