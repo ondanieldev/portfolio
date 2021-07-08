@@ -45,11 +45,11 @@ const Carousel: React.FC = ({ children }) => {
       </Slide>
 
       <Backward onClick={handleBackward} isMobile={isMobile}>
-        <Icon as={FaAngleLeft} boxSize={25} />
+        <Icon as={FaAngleLeft} boxSize={35} />
       </Backward>
 
       <Forward onClick={handleForward} isMobile={isMobile}>
-        <Icon as={FaAngleRight} boxSize={25} />
+        <Icon as={FaAngleRight} boxSize={35} />
       </Forward>
     </Container>
   );

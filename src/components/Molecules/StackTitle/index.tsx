@@ -52,7 +52,12 @@ const StackTitle: React.FC<IProps> = ({ stacks, name, photo }) => {
           </Heading>
         </Box>
 
-        <Avatar size={avatarSize} name={name} src={photo} />
+        <Avatar
+          size={avatarSize}
+          name={name}
+          src={photo}
+          backgroundColor="transparent"
+        />
       </Flex>
     </Flex>
   );
