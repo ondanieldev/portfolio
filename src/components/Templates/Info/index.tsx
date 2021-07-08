@@ -26,7 +26,7 @@ const Info: React.FC = () => {
         },
         {
           title: 'League of Devs',
-          text: 'Founder & Fullcycle developer',
+          text: 'Founder and fullcycle developer',
           link: 'https://www.leagueofdevs.com.br/',
           image: '/images/lod-logo.png',
           imageAlt: 'League of Devs',
