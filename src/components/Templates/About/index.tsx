@@ -14,11 +14,9 @@ const About: React.FC = () => {
         currently studying Information Systems at the Federal University of
         Minas Gerais (UFMG) in order to obtain opportunities to learn robotics
         from a scientific point of view. I&apos;m also learning about blockchain
-        and improoving my english on my own. I listen music all day and
-        it&apos;s like my gasoline (coffee also has responsibility in this). In
-        short, I love robotics, machine learning, artificial intelligence, IoT,
-        web development, linux, and much more! Sometimes, I also edit photos and
-        videos, but I&apos;m just an amateur.
+        and smart contracts on my own. In short, I love robotics, machine
+        learning, artificial intelligence, IoT, web development, linux, and much
+        more!
       </Text>
       <BreakingNews text="Learning Go and Solidity" />
       <BreakingNews text="Working hard at Spiry Capital" />
