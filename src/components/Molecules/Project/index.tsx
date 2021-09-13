@@ -1,4 +1,5 @@
 import React from 'react';
+// import Image from 'next/image';
 import {
   Box,
   Heading,
@@ -33,13 +34,7 @@ const Project: React.FC<IProps> = ({
     <LinkBox w="100%" borderWidth="2px" borderRadius="5px" overflow="hidden">
       <LinkOverlay href={link} isExternal />
 
-      <Image
-        objectFit="cover"
-        w="100%"
-        maxH="300px"
-        src={image}
-        alt={imageAlt}
-      />
+      <Image objectFit="cover" w="100%" h="300px" src={image} alt={imageAlt} />
 
       <Box p="15px">
         <Heading mb="10px" as="h3" size="md">

@@ -83,6 +83,24 @@ const Projects: React.FC = () => {
         description:
           'Cowop is a technology education platform that helps users to interact with each other to offer their classes and learn about a specific technology.',
       },
+      {
+        title: 'Microchat',
+        imageAlt: 'Microchat',
+        techs: [
+          'react',
+          'node.js',
+          'typescript',
+          'postgresql',
+          'redis',
+          'docker',
+          'nginx',
+          'github',
+          'git',
+        ],
+        link: 'https://microchat.ondaniel.com.br/',
+        image: '/images/microchat.png',
+        description: 'Microchat is a simple chat service.',
+      },
     ],
     [],
   );
