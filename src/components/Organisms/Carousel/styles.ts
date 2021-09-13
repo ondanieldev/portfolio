@@ -17,7 +17,6 @@ const fadeIn = keyframes`
 
 export const Container = styled.div`
   width: 100%;
-  height: 100%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -25,6 +24,7 @@ export const Container = styled.div`
 `;
 
 export const Control = styled.div<IControlProps>`
+  top: 0;
   height: 100%;
   display: flex;
   align-items: center;
