@@ -25,7 +25,7 @@ const Projects: React.FC = () => {
         link: 'https://santiago-demo.ondaniel.com.br/',
         image: '/images/santiago-demo.png',
         description:
-          'Santiago is a school management system that allows managing classes, school seasons, subscription values, students, responsibles and so on. Click on the project and test the demo version.',
+          'Santiago is a school management system that allows managing classes, school seasons, subscription values, students, responsibles and so on. Click on the project to try a demo version!',
       },
       {
         title: 'Wellets',
