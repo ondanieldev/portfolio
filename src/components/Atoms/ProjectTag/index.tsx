@@ -40,6 +40,8 @@ const ProjectTag: React.FC<IProps> = ({ text }) => {
         return 'blue';
       case 'nginx':
         return 'green';
+      case 'kubernetes':
+        return 'blue';
       case 'not relesead yet':
         return 'red';
       default:
