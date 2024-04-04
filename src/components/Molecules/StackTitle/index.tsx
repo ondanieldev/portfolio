@@ -48,7 +48,7 @@ const StackTitle: React.FC<IProps> = ({ stacks, name, photo }) => {
             </Heading>
           </StackContainer>
           <Heading as="h1" size={titleSize}>
-            Developer
+            Software Engineer
           </Heading>
         </Box>
 
