@@ -1,12 +1,13 @@
 import { useBreakpointValue } from '@chakra-ui/media-query';
 import React, { useMemo } from 'react';
 import {
-  SiNodeDotJs,
+  SiNodedotjs,
   SiTypescript,
-  SiGo,
+  SiNestjs,
+  SiRust,
   SiPhp,
   SiReact,
-  SiNextDotJs,
+  SiNextdotjs,
   SiDocker,
   SiGithub,
   SiGit,
@@ -18,7 +19,6 @@ import {
   SiRedis,
 } from 'react-icons/si';
 
-import SolidityIcon from '../../Atoms/SolidityIcon';
 import SkillsCircle, { ICircle } from '../../Molecules/SkillsCircle';
 
 const Skills: React.FC = () => {
@@ -36,7 +36,7 @@ const Skills: React.FC = () => {
       circleSize: baseCircleSize,
       itemSize: baseItemSize,
       icons: [
-        { icon: SiNextDotJs, color: '#fff' },
+        { icon: SiNextdotjs, color: '#fff' },
         { icon: SiElectron, color: '#47848F' },
         { icon: SiReact, color: '#61DAFB' },
       ],
@@ -50,9 +50,9 @@ const Skills: React.FC = () => {
       itemSize: baseItemSize,
       icons: [
         { icon: SiPhp, color: '#777BB4' },
-        { icon: SolidityIcon, color: '#363636' },
-        { icon: SiGo, color: '#00ADD8' },
-        { icon: SiNodeDotJs, color: '#339933' },
+        { icon: SiRust, color: '#000000' },
+        { icon: SiNestjs, color: '#df234e' },
+        { icon: SiNodedotjs, color: '#339933' },
         { icon: SiTypescript, color: '#3178C6' },
       ],
     }),

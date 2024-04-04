@@ -40,13 +40,13 @@ const Carousel: React.FC = ({ children }) => {
 
   return (
     <Container>
-      <Slide>
-        <div key={current}>{children[current] || children || <></>}</div>
-      </Slide>
-
       <Backward onClick={handleBackward} isMobile={isMobile}>
         <Icon as={FaAngleLeft} boxSize={35} />
       </Backward>
+
+      <Slide>
+        <div key={current}>{children[current] || children || <></>}</div>
+      </Slide>
 
       <Forward onClick={handleForward} isMobile={isMobile}>
         <Icon as={FaAngleRight} boxSize={35} />

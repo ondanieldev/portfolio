@@ -13,19 +13,14 @@ import StackTitle from '../../Molecules/StackTitle';
 import SocialBar, { ISocialIcon } from '../../Molecules/SocialBar';
 
 const Presentation: React.FC = () => {
-  const stacks = useMemo<string[]>(() => ['Fullstack', 'Blockchain'], []);
+  const stacks = useMemo<string[]>(() => ['Full Stack'], []);
 
   const socials = useMemo<ISocialIcon[]>(
     () => [
       { icon: FaEnvelope, link: 'mailto:me@ondaniel.com.br' },
       { icon: FaGithub, link: 'https://github.com/ondanieldev' },
-      {
-        icon: FaInstagram,
-        link: 'https://www.instagram.com/ondanieldev/',
-      },
       { icon: FaLinkedin, link: 'https://www.linkedin.com/in/ondanieldev/' },
       { icon: FaTelegramPlane, link: 'https://t.me/ondanieldev' },
-      { icon: FaTwitter, link: 'https://github.com/ondanieldev' },
     ],
     [],
   );
@@ -35,7 +30,7 @@ const Presentation: React.FC = () => {
       <StackTitle
         stacks={stacks}
         name="Daniel Oliveira"
-        photo="/images/avatar.jpg"
+        photo="/images/avatar.png"
       />
       <SocialBar socials={socials} />
     </Flex>

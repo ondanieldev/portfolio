@@ -8,28 +8,35 @@ import InfoGroup, {
 const Info: React.FC = () => {
   const orgs = useMemo<IInfoGroupProps>(
     () => ({
-      title: 'Current Orgs',
+      title: 'Worked orgs',
       cards: [
         {
           title: 'Spiry Capital',
-          text: 'Fullstack and blockchain developer',
+          text: 'Full stack and blockchain developer',
           link: 'https://spiry.ro/',
           image: '/images/spiry-logo.png',
           imageAlt: 'Spiry Capital',
         },
         {
+          title: 'Postmetria',
+          text: 'Full stack developer',
+          link: 'https://postmetria.com.br/',
+          image: '/images/postmetria-logo.png',
+          imageAlt: 'Postmetria',
+        },
+        {
           title: 'Frenchie Network',
-          text: 'Fullstack and blockchain developer',
+          text: 'Full stack and blockchain developer',
           link: 'https://frenchie.tech/',
           image: '/images/frenchie-logo.png',
           imageAlt: 'Frenchie Network',
         },
         {
-          title: 'League of Devs',
-          text: 'Founder and fullcycle developer',
-          link: 'https://www.leagueofdevs.com.br/',
-          image: '/images/lod-logo.png',
-          imageAlt: 'League of Devs',
+          title: 'Colégio Santiago',
+          text: 'Robotics teacher and full stack developer',
+          link: 'https://colegiosantiago.com.br/',
+          image: '/images/santiago-logo.png',
+          imageAlt: 'Frenchie Network',
         },
       ],
     }),
@@ -49,7 +56,7 @@ const Info: React.FC = () => {
         },
         {
           title: 'UFMG',
-          text: "Bachelor's degree in Information Systems",
+          text: "Incomplete bachelor's degree in Information Systems",
           link: 'https://ufmg.br/',
           image: '/images/ufmg-logo.png',
           imageAlt: 'UFMG',
