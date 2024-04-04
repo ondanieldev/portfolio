@@ -8,10 +8,14 @@ const About: React.FC = () => {
   return (
     <Stack>
       <Heading text="About me" alignSelf="center" />
-      <Text textAlign="justify" fontSize="1.2em" />
-      <BreakingNews text="Learning Go and Solidity" />
-      <BreakingNews text="Working hard at Spiry Capital" />
-      <BreakingNews text="Planning to learn more about AI and robotics" />
+      <Text textAlign="justify" fontSize="1.2em">
+        I'm a software engineer with more than 4 years of office and remote work
+        experience. I excel in comprehending project requirements,
+        conceptualizing software designs, creating software diagrams,
+        managing/guiding other developers and implementing front-end, back-end,
+        DevOps, and mobile solutions
+      </Text>
+      <BreakingNews text="Currently learning Rust and Solana Smart Contracts" />
     </Stack>
   );
 };
