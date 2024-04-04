@@ -12,28 +12,28 @@ const Info: React.FC = () => {
       cards: [
         {
           title: 'Spiry Capital',
-          text: 'Full stack and blockchain developer',
+          text: 'Full stack and blockchain software engineer',
           link: 'https://spiry.ro/',
           image: '/images/spiry-logo.png',
           imageAlt: 'Spiry Capital',
         },
         {
           title: 'Postmetria',
-          text: 'Full stack developer',
+          text: 'Full stack software engineer',
           link: 'https://postmetria.com.br/',
           image: '/images/postmetria-logo.png',
           imageAlt: 'Postmetria',
         },
         {
           title: 'Frenchie Network',
-          text: 'Full stack and blockchain developer',
+          text: 'Full stack and blockchain software engineer',
           link: 'https://frenchie.tech/',
           image: '/images/frenchie-logo.png',
           imageAlt: 'Frenchie Network',
         },
         {
           title: 'Colégio Santiago',
-          text: 'Robotics teacher and full stack developer',
+          text: 'Robotics teacher and full stack software engineer',
           link: 'https://colegiosantiago.com.br/',
           image: '/images/santiago-logo.png',
           imageAlt: 'Frenchie Network',
