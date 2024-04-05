@@ -10,10 +10,11 @@ const About: React.FC = () => {
       <Heading text="About me" alignSelf="center" />
       <Text textAlign="justify" fontSize="1.2em">
         I'm a full stack software engineer with more than 4 years of office and
-        remote work experience. I excel in comprehending project requirements,
-        conceptualizing software designs, creating software diagrams,
-        managing/guiding other developers and implementing front-end, back-end,
-        DevOps, and mobile solutions
+        remote work experience. I excel in comprehending project requirements;
+        conceptualizing software designs; creating software diagrams;
+        managing/guiding other developers; implementing front-end, back-end,
+        DevOps, and mobile solutions; applying unit and integration tests; and
+        continuously maintaining projects.
       </Text>
       <BreakingNews text="Currently learning Rust and Solana Smart Contracts" />
     </Stack>
