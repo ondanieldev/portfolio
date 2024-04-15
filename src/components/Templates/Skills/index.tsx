@@ -4,7 +4,6 @@ import {
   SiNodedotjs,
   SiTypescript,
   SiNestjs,
-  SiRust,
   SiPhp,
   SiReact,
   SiNextdotjs,
@@ -12,20 +11,29 @@ import {
   SiGithub,
   SiGit,
   SiNginx,
-  SiElectron,
   SiPostgresql,
   SiMysql,
   SiMongodb,
   SiRedis,
+  SiRedux,
+  SiFigma,
+  SiStorybook,
+  SiKubernetes,
+  SiBackstage,
+  SiAmazonaws,
+  SiGooglecloud,
+  SiJest,
+  SiCypress,
+  SiJavascript,
 } from 'react-icons/si';
 
 import SkillsCircle, { ICircle } from '../../Molecules/SkillsCircle';
 
+const baseItemSize = 50;
+
+const baseCircleSize = 200;
+
 const Skills: React.FC = () => {
-  const baseItemSize = useMemo(() => 50, []);
-
-  const baseCircleSize = useMemo(() => 200, []);
-
   const circleSizeMultiplier = useBreakpointValue({
     base: 0,
     sm: 150,
@@ -36,12 +44,12 @@ const Skills: React.FC = () => {
       circleSize: baseCircleSize,
       itemSize: baseItemSize,
       icons: [
-        { icon: SiNextdotjs, color: '#fff' },
-        { icon: SiElectron, color: '#47848F' },
         { icon: SiReact, color: '#61DAFB' },
+        { icon: SiNextdotjs, color: '#fff' },
+        { icon: SiRedux, color: '#754abc' },
       ],
     }),
-    [baseCircleSize, baseItemSize],
+    [],
   );
 
   const backend = useMemo<ICircle>(
@@ -49,35 +57,53 @@ const Skills: React.FC = () => {
       circleSize: baseCircleSize + 1 * circleSizeMultiplier,
       itemSize: baseItemSize,
       icons: [
-        { icon: SiPhp, color: '#777BB4' },
-        { icon: SiRust, color: '#000000' },
-        { icon: SiNestjs, color: '#df234e' },
-        { icon: SiNodedotjs, color: '#339933' },
+        { icon: SiJavascript, color: '#f7e01c' },
         { icon: SiTypescript, color: '#3178C6' },
+        { icon: SiNodedotjs, color: '#339933' },
+        { icon: SiNestjs, color: '#df234e' },
+        { icon: SiPhp, color: '#777BB4' },
       ],
     }),
-    [baseCircleSize, circleSizeMultiplier, baseItemSize],
+    [circleSizeMultiplier],
   );
 
   const devops = useMemo<ICircle>(
     () => ({
-      circleSize: baseCircleSize + 2 * circleSizeMultiplier,
+      circleSize: baseCircleSize + 3 * circleSizeMultiplier,
       itemSize: baseItemSize,
       icons: [
-        { icon: SiDocker, color: '#2496ED' },
         { icon: SiNginx, color: '#009639' },
-        { icon: SiGithub, color: '#fff' },
-        { icon: SiGit, color: '#F05032' },
-        { icon: SiPostgresql, color: '#4169E1' },
+        { icon: SiDocker, color: '#2496ED' },
+        { icon: SiKubernetes, color: '#306ce5' },
+        { icon: SiAmazonaws, color: '#e4933d' },
+        { icon: SiGooglecloud, color: '#1a72e7' },
         { icon: SiMysql, color: '#4479A1' },
+        { icon: SiPostgresql, color: '#4169E1' },
         { icon: SiMongodb, color: '#47A248' },
         { icon: SiRedis, color: '#DC382D' },
       ],
     }),
-    [baseCircleSize, circleSizeMultiplier, baseItemSize],
+    [circleSizeMultiplier],
   );
 
-  return <SkillsCircle circles={[frontend, backend, devops]} />;
+  const general = useMemo<ICircle>(
+    () => ({
+      circleSize: baseCircleSize + 2 * circleSizeMultiplier,
+      itemSize: baseItemSize,
+      icons: [
+        { icon: SiGit, color: '#F05032' },
+        { icon: SiGithub, color: '#fff' },
+        { icon: SiJest, color: '#9a425c' },
+        { icon: SiCypress, color: '#077681' },
+        { icon: SiStorybook, color: '#f84a86' },
+        { icon: SiFigma, color: '#5651ff' },
+        { icon: SiBackstage, color: '#35baa0' },
+      ],
+    }),
+    [circleSizeMultiplier],
+  );
+
+  return <SkillsCircle circles={[frontend, backend, general, devops]} />;
 };
 
 export default Skills;
