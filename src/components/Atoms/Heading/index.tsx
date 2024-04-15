@@ -1,7 +1,7 @@
 import React from 'react';
-import { HeadingProps } from '@chakra-ui/react';
+import { Heading as BaseHeading, HeadingProps } from '@chakra-ui/react';
 
-import { Container } from './styles';
+// import { Container } from './styles';
 
 interface IProps extends HeadingProps {
   text: string;
@@ -9,9 +9,9 @@ interface IProps extends HeadingProps {
 
 const Heading: React.FC<IProps> = ({ text, ...rest }) => {
   return (
-    <Container text={text} {...rest}>
+    <BaseHeading text={text} {...rest}>
       {text}
-    </Container>
+    </BaseHeading>
   );
 };
 

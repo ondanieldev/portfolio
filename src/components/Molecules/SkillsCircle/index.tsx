@@ -10,7 +10,7 @@ export interface ICircle {
   itemSize: number;
   icons: {
     icon: IconType;
-    color: string;
+    color?: string;
   }[];
 }
 
