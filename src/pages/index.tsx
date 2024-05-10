@@ -18,6 +18,7 @@ const Home: NextPage = () => {
       <Head title="Daniel Oliveira" />
 
       <Presentation />
+
       <Stack spacing="150px" mb="150px">
         <Skills />
         <Projects />
