@@ -1,59 +1,36 @@
 import React, { useMemo } from 'react';
 import { Badge } from '@chakra-ui/react';
+import { Tech } from '../../../enums/Tech.enum';
+import { techDataMap } from '../../../data/tech.data';
+import { alphaValue, defaultColor, isHex } from './data';
 
 interface IProps {
-  text: string;
+  tech: Tech;
 }
 
-const ProjectTag: React.FC<IProps> = ({ text }) => {
+const ProjectTag: React.FC<IProps> = ({ tech }) => {
   const color = useMemo(() => {
-    switch (text) {
-      case 'react':
-        return 'blue';
-      case 'electron':
-        return 'teal';
-      case 'next.js':
-        return 'gray';
-      case 'typescript':
-        return 'blue';
-      case 'php':
-        return 'purple';
-      case 'solidity':
-        return 'gray';
-      case 'go':
-        return 'blue';
-      case 'node.js':
-        return 'green';
-      case 'github':
-        return 'gray';
-      case 'git':
-        return 'orange';
-      case 'postgresql':
-        return 'purple';
-      case 'mysql':
-        return 'blue';
-      case 'mongo':
-        return 'green';
-      case 'redis':
-        return 'red';
-      case 'docker':
-        return 'blue';
-      case 'nginx':
-        return 'green';
-      case 'kubernetes':
-        return 'blue';
-      case 'nestjs':
-        return 'red';
-      case 'not relesead yet':
-        return 'red';
-      default:
-        return 'white';
+    return techDataMap[tech]?.color || defaultColor;
+  }, [tech]);
+
+  const bgColor = useMemo(() => {
+    if (isHex(color)) {
+      return `${color}${alphaValue}`;
     }
-  }, [text]);
+
+    // Otherwise, return plain color
+    return color;
+  }, [color]);
 
   return (
-    <Badge py="5px" px="10px" colorScheme={color}>
-      {text}
+    <Badge
+      py="5px"
+      px="10px"
+      bgColor={bgColor}
+      color={color}
+      textTransform="none"
+    >
+      {tech}
     </Badge>
   );
 };
