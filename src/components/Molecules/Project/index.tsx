@@ -9,6 +9,7 @@ import {
   WrapItem,
   LinkBox,
   LinkOverlay,
+  Link,
 } from '@chakra-ui/react';
 
 import ProjectTag from '../../Atoms/ProjectTag';
@@ -45,7 +46,11 @@ export interface IProps {
   };
   description: string;
   title: string;
-  link: string;
+  link?: string;
+  subLinks?: {
+    text: string;
+    href: string;
+  }[][];
 }
 
 const Project: React.FC<IProps> = ({
@@ -55,6 +60,7 @@ const Project: React.FC<IProps> = ({
   techs,
   title,
   link,
+  subLinks,
 }) => {
   const techsList = useMemo<Tech[]>(
     () =>
@@ -73,7 +79,7 @@ const Project: React.FC<IProps> = ({
 
   return (
     <LinkBox w="100%" borderWidth="2px" borderRadius="5px" overflow="hidden">
-      <LinkOverlay href={link} isExternal />
+      {link && <LinkOverlay href={link} isExternal />}
 
       <Image objectFit="cover" w="100%" h="300px" src={image} alt={imageAlt} />
 
@@ -93,6 +99,25 @@ const Project: React.FC<IProps> = ({
         <Text mt="10px" fontSize="1.2em">
           {description}
         </Text>
+
+        {subLinks?.length &&
+          subLinks.map(group => (
+            <Box mt="10px">
+              <Wrap direction="row" spacing="15px" justify="center">
+                {group.map(({ href, text }) => (
+                  <Link
+                    rel="noreferrer"
+                    target="_blank"
+                    href={href}
+                    textDecoration="underline"
+                    color="blue.500"
+                  >
+                    {text}
+                  </Link>
+                ))}
+              </Wrap>
+            </Box>
+          ))}
       </Box>
     </LinkBox>
   );
