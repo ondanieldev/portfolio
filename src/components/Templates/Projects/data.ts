@@ -2,6 +2,64 @@ import { IProps as IProjectProps } from '../../Molecules/Project';
 
 export const projects: IProjectProps[] = [
   {
+    title: 'Rabbits',
+    imageAlt: 'Rabbits',
+    techs: {
+      architecture: ['Solid'],
+      backEnd: ['NestJS', 'Node.js'],
+      ci: ['GitHub workflows'],
+      database: ['PostgreSQL', 'Redis'],
+      devops: ['AWS', 'Nginx'],
+      frontend: ['Figma', 'Redux.js', 'Storybook'],
+      general: ['TypeScript'],
+      mobile: ['React Native'],
+      qa: ['Jest'],
+      versioning: ['Git', 'GitHub'],
+    },
+    image: '/images/rabbits.svg',
+    description:
+      "Rabbits is an app that aims to help people to improve their routine by managing habits, reminders and events. I want to improve the app continuously in order to add more ways to help people to manage their lives. Given this idea, project's roadmap includes modules for managing house storage, finance, pets and plants!",
+    subLinks: [
+      [
+        {
+          href: 'https://rabbits-api.ondaniel.com.br',
+          text: 'API',
+        },
+        {
+          href: '#',
+          text: 'Google Play Store',
+        },
+      ],
+      [
+        {
+          href: 'https://github.com/ondanieldev/rabbits-api-insomnia',
+          text: 'API Insomnia',
+        },
+        {
+          href: 'https://github.com/ondanieldev/rabbits-api',
+          text: 'API Repository',
+        },
+        {
+          href: 'https://rabbits-api.ondaniel.com.br/api',
+          text: 'API Specification',
+        },
+        {
+          href: 'https://www.figma.com/file/ipDwne7ajgybxQml25PKn6/Rabbits?type=design&node-id=0%3A1&mode=design&t=q69bOm7uSXI063jO-1',
+          text: 'Figma',
+        },
+
+        {
+          href: 'https://github.com/ondanieldev/rabbits-mobile',
+          text: 'Mobile Repository',
+        },
+        {
+          href: 'https://ondanieldev.notion.site/Rabbits-Roadmap-05a85728e4d946cd8b4fb51dea256ce0?pvs=4',
+          text: 'Roadmap',
+        },
+      ],
+    ],
+  },
+  {
     title: 'Santiago',
     imageAlt: 'Santiago',
     techs: {
