@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 // import Image from 'next/image';
 import {
   Box,
@@ -12,11 +12,37 @@ import {
 } from '@chakra-ui/react';
 
 import ProjectTag from '../../Atoms/ProjectTag';
+import {
+  ArchitectureTech,
+  BackEndTech,
+  CiTech,
+  DatabaseTech,
+  DevopsTech,
+  FrontendTech,
+  GeneralTech,
+  MessagebrokerTech,
+  MobileTech,
+  QaTech,
+  Tech,
+  VersioningTech,
+} from '../../../enums/Tech.enum';
 
 export interface IProps {
   image: string;
   imageAlt: string;
-  techs: string[];
+  techs: {
+    general?: GeneralTech[];
+    architecture?: ArchitectureTech[];
+    backEnd?: BackEndTech[];
+    ci?: CiTech[];
+    database?: DatabaseTech[];
+    devops?: DevopsTech[];
+    frontend?: FrontendTech[];
+    messagebroker?: MessagebrokerTech[];
+    mobile?: MobileTech[];
+    qa?: QaTech[];
+    versioning?: VersioningTech[];
+  };
   description: string;
   title: string;
   link: string;
@@ -30,6 +56,21 @@ const Project: React.FC<IProps> = ({
   title,
   link,
 }) => {
+  const techsList = useMemo<Tech[]>(
+    () =>
+      Object.values(techs)
+        .filter(Boolean)
+        .reduce(
+          (resultArr, currArr) =>
+            [
+              ...resultArr,
+              ...currArr.sort((a: string, b: string) => a.localeCompare(b)),
+            ] as Tech[],
+          [],
+        ),
+    [techs],
+  );
+
   return (
     <LinkBox w="100%" borderWidth="2px" borderRadius="5px" overflow="hidden">
       <LinkOverlay href={link} isExternal />
@@ -42,9 +83,9 @@ const Project: React.FC<IProps> = ({
         </Heading>
 
         <Wrap direction="row" spacing="15px">
-          {techs.map((tech, i) => (
+          {techsList.map((tech, i) => (
             <WrapItem key={i}>
-              <ProjectTag text={tech} />
+              <ProjectTag tech={tech} />
             </WrapItem>
           ))}
         </Wrap>

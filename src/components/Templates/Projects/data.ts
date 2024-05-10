@@ -1,0 +1,112 @@
+import { IProps as IProjectProps } from '../../Molecules/Project';
+
+export const projects: IProjectProps[] = [
+  {
+    title: 'Santiago',
+    imageAlt: 'Santiago',
+    techs: {
+      architecture: ['Solid', 'TDD'],
+      backEnd: ['Node.js'],
+      ci: ['GitHub workflows'],
+      database: ['MongoDB', 'PostgreSQL', 'Redis'],
+      devops: ['Docker', 'Nginx'],
+      frontend: ['Figma', 'Next.js', 'Redux.js', 'React.js'],
+      general: ['TypeScript'],
+      versioning: ['Git', 'GitHub'],
+    },
+    link: 'https://santiago-demo.ondaniel.com.br/',
+    image: '/images/santiago-demo.png',
+    description:
+      'Santiago is a school management system that allows managing classes, school seasons, subscription values, students, responsibles and so on. Click on the project to try a demo version!',
+  },
+  {
+    title: 'Orion',
+    imageAlt: 'Orion',
+    techs: {
+      architecture: ['Solid'],
+      backEnd: ['NestJS', 'Node.js'],
+      ci: ['GitHub workflows'],
+      database: ['MongoDB', 'PostgreSQL', 'Redis'],
+      devops: ['AWS', 'Docker', 'Nginx', 'Kubernetes'],
+      frontend: ['Next.js', 'Redux.js', 'React.js'],
+      general: ['TypeScript'],
+      messagebroker: ['RabbitMQ', 'BullMQ'],
+      versioning: ['Git', 'GitHub'],
+    },
+    link: 'https://orion.spiry.ro/',
+    image: '/images/orion.png',
+    description:
+      'Orion is a SaaS that serves as a P2P marketplace assistant by providing a wide range of tools to help when trading and managing employees.',
+  },
+  {
+    title: 'Pokedex',
+    imageAlt: 'Pokedex',
+    techs: {
+      architecture: ['Solid'],
+      backEnd: ['Node.js'],
+      ci: ['GitHub workflows'],
+      database: ['PostgreSQL', 'Redis'],
+      devops: ['Docker', 'Nginx'],
+      frontend: ['React.js'],
+      general: ['TypeScript'],
+      versioning: ['Git', 'GitHub'],
+    },
+    link: 'https://pokedex.ondaniel.com.br/',
+    image: '/images/pokedex.png',
+    description:
+      'Pokedex is a company test consisting on consuming a Pokemon API through a own API and display its data.',
+  },
+  {
+    title: 'Wellets',
+    imageAlt: 'Wellets',
+    techs: {
+      architecture: ['Solid'],
+      backEnd: ['Node.js'],
+      ci: ['GitHub workflows'],
+      database: ['MongoDB', 'PostgreSQL', 'Redis'],
+      devops: ['Docker', 'Nginx'],
+      frontend: ['React.js', 'Redux.js'],
+      general: ['TypeScript'],
+      versioning: ['Git', 'GitHub'],
+    },
+    link: 'https://wellets.ondaniel.com.br/',
+    image: '/images/wellets.png',
+    description:
+      'Wellets is a financial management website that helps users to manage their money placed in multiple portfolios. It was developed with a focus on users engaged in the crypto world.',
+  },
+  {
+    title: 'Microchat',
+    imageAlt: 'Microchat',
+    techs: {
+      architecture: ['Solid'],
+      backEnd: ['Node.js'],
+      ci: ['GitHub workflows'],
+      database: ['PostgreSQL'],
+      devops: ['Docker', 'Nginx'],
+      frontend: ['React.js', 'Redux.js'],
+      general: ['TypeScript'],
+      versioning: ['Git', 'GitHub'],
+    },
+    link: 'https://microchat.ondaniel.com.br/',
+    image: '/images/microchat.png',
+    description: 'Microchat is a simple chat service.',
+  },
+  {
+    title: 'Koinzaar',
+    imageAlt: 'Koinzaar',
+    techs: {
+      architecture: ['Solid'],
+      backEnd: ['Node.js'],
+      ci: ['GitHub workflows'],
+      database: ['MongoDB', 'PostgreSQL', 'Redis'],
+      devops: ['Docker', 'Nginx', 'AWS', 'Kubernetes'],
+      frontend: ['Redux.js', 'Next.js', 'React.js'],
+      general: ['TypeScript'],
+      versioning: ['Git', 'GitHub'],
+    },
+    link: 'https://www.koinzaar.com/',
+    image: '/images/koinzaar.png',
+    description:
+      'Koinzaar is a multi-cryptocurrency P2P Platform that enables users to buy and sell cryptocurrencies using a wide range of payment methods offered by other users from their country or worldwide.',
+  },
+];
