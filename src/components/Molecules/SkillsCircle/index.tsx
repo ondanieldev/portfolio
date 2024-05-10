@@ -3,15 +3,18 @@ import { Icon, useBreakpointValue } from '@chakra-ui/react';
 import { IconType } from 'react-icons';
 
 import Heading from '../../Atoms/Heading';
+
 import { Wrapper, Container } from './styles';
+
+export type ICircleIcon = {
+  icon: IconType;
+  color?: string;
+};
 
 export interface ICircle {
   circleSize: number;
   itemSize: number;
-  icons: {
-    icon: IconType;
-    color?: string;
-  }[];
+  icons: ICircleIcon[];
 }
 
 export interface IProps {
