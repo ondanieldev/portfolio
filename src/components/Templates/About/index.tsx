@@ -10,12 +10,13 @@ const About: React.FC = () => {
       <Heading text="About me" alignSelf="center" />
       <Text textAlign="justify" fontSize="1.2em">
         Full Stack Software Engineer with four years of experience building
-        robust and scalable projects including responsive UIs, RESTful APIs and
-        multi-platform mobile apps. Proficient in TypeScript, JavaScript and
-        Node.js. Experience working with versioning tools, DevOps, SQL and NoSQL
-        databases, message brokers, documentation tools, modern frameworks, QA
-        tools and team management. Recently turned a legacy JavaScript dashboard
-        into a TypeScript SaaS to assist trading on P2P crypto marketplaces.
+        robust and scalable projects including responsive UIs, GraphQL and
+        RESTful APIs and multi-platform mobile apps. Proficient in TypeScript,
+        JavaScript and Node.js. Experience working with versioning tools,
+        DevOps, SQL and NoSQL databases, message brokers, documentation tools,
+        modern frameworks, QA tools and team management. Recently turned a
+        legacy JavaScript dashboard into a TypeScript SaaS to assist trading on
+        P2P crypto marketplaces.
       </Text>
       <BreakingNews text="Currently learning Rust and Solana Smart Contracts" />
     </Stack>

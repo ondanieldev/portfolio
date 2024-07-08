@@ -30,6 +30,8 @@ import {
   SiRabbitmq,
   SiTravisci,
   SiBitbucket,
+  SiApollographql,
+  SiExpress,
 } from 'react-icons/si';
 
 import { Tech } from '../enums/Tech.enum';
@@ -41,6 +43,11 @@ export type TechData = {
 };
 
 export const techDataMap: Record<Tech, TechData> = {
+  'Apollo GraphQL': {
+    color: '#fc5200',
+    icon: SiApollographql,
+    showOnSkillCircle: true,
+  },
   Backstage: {
     color: '#35baa0',
     icon: SiBackstage,
@@ -111,6 +118,11 @@ export const techDataMap: Record<Tech, TechData> = {
     color: '#ffd109',
     icon: SiElasticsearch,
     showOnSkillCircle: false,
+  },
+  'Express.js': {
+    color: '#ffffff',
+    icon: SiExpress,
+    showOnSkillCircle: true,
   },
   Figma: {
     color: '#5651ff',

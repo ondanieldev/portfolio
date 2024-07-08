@@ -6,7 +6,12 @@ export const architectureTechs = [
   'Solid',
   'TDD',
 ] as const;
-export const backEndTechs = ['Node.js', 'NestJS'] as const;
+export const backEndTechs = [
+  'Apollo GraphQL',
+  'Express.js',
+  'Node.js',
+  'NestJS',
+] as const;
 export const ciTechs = [
   'CircleCI',
   'GitHub workflows',
